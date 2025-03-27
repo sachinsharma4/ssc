@@ -1,9 +1,10 @@
-import { GiHamburgerMenu } from "react-icons/gi";
+import NavBar from "./component/NavBar";
 import Image from "next/image";
 import Link from 'next/link';
 import React from 'react';
 import { AiOutlineDown } from "react-icons/ai";
 import { Field, Label, Switch } from '@headlessui/react'
+import Footer from "./component/Footer";
 
 const FacultyProfileCard = () => {
   return (
@@ -26,10 +27,6 @@ const FacultyProfileCard = () => {
     </div>
   );
 };
-
-
-
-
 
 const  Example = () => {
  
@@ -205,9 +202,8 @@ const TestimonialCard = () => {
 };
 
 
-export default function Home() {
+  function Drawer() {
   return (
-    <div>
 <div>
 <div className="bg-blue-400 w-44  hidden min-h-screen z-20 ">
   <button className=" block ml-36 text-white pt-2 text-2xl">X</button>
@@ -224,31 +220,16 @@ export default function Home() {
 
 </div>
 </div>
+  )
+}
+
+
+export default function Home() {
+  return (
+    <div>
+<Drawer/>
 <div className="main-ui">
-<nav className="sticky bg-blue-800 z-10 top-0 p-4 shadow-lg  container mx-auto flex justify-between items-center">
-
-<div className="text-white font-bold text-2xl">
-
-  <GiHamburgerMenu className=" inline -mt-1" />
-  <span> SSC Classes</span>
-
-
-</div>
-
-{/* Nav Links */}
-<div className="hidden md:flex space-x-6">
-  <Link href="/about" className="text-white hover:text-yellow-300">About
-  </Link>
-  <Link href="/courses" className="text-white hover:text-yellow-300">Courses
-  </Link>
-  <Link href="/contact" className="text-white hover:text-yellow-300">Contact
-  </Link>
-
-</div>
-
-
-
-</nav>
+<NavBar/>
 
 
 <div className="p-3.5 container min-w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  ">
@@ -281,21 +262,9 @@ export default function Home() {
 
 
 
-<footer className="sticky w-full mt-3.5 text-green-400  bottom-0   bg-blue-700">
 
-<div className="text-center">
-  ssc classes registerd trademark
-  <ul className="flex flex-row w-3/5 space-x-2.5">
-
-    <li>yoiutube</li>
-    <li>twiter</li>
-    <li>intsa</li>
-    <li>linkdin</li>
-  </ul>
 </div>
-</footer>
-</div>
-
+<Footer/>
 
     
     </div>
