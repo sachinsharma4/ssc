@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { GiHamburgerMenu } from "react-icons/gi";
 function NavBar() {
   return (
-<nav className="sticky bg-blue-800 z-10 top-0 p-4 shadow-lg  container mx-auto flex justify-between items-center">
+<nav className="sticky min-w-full bg-blue-800 z-10 top-0 p-4 shadow-lg  container mx-auto flex justify-between items-center">
 
 <div className="text-white font-bold text-2xl">
 
